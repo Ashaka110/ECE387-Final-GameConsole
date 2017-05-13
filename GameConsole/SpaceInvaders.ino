@@ -21,8 +21,8 @@ short setMissile(uint8_t arrayStart, uint8_t m, short missiledata)
 #define enemyYoffset 56
 #define enemyXoffset 48
 
-uint8_t enemyX;
-uint8_t enemyY;
+int enemyX;
+int enemyY;
 uint8_t enemyData[3];
 
 #define timeToRespawn 5;

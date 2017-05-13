@@ -64,7 +64,7 @@ void tetrisLoop() {
 
     renderBoard();
 
-    if(isLeftButtonPressed()){
+    if(isLeftButtonDown()){
         clearPieceImage();
         short testData = pieceData & 0xff0f | ((pieceData>>4 & 15)-1)<<4;
         if(testPosition(currentPiece, testData)){
@@ -81,7 +81,7 @@ void tetrisLoop() {
           currentPiece = testData;
       
     }
-    if(isRightButtonPressed()){
+    if(isRightButtonDown()){
        clearPieceImage();
         short testData = pieceData & 0xff0f | ((pieceData>>4 & 15)+1)<<4;
         if(testPosition(currentPiece, testData)){
@@ -90,7 +90,7 @@ void tetrisLoop() {
         }
        
     }
-    if(isDownButtonPressed()){ 
+    if(isDownButtonDown()){ 
           onTickUpdate(); 
     }
 

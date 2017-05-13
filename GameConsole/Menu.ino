@@ -1,6 +1,6 @@
 const uint16_t menucolors[8] PROGMEM = {0, 8192,4,8480, 288,8196,292,8484};//matrix.Color333(1, 0, 0), matrix.Color333(0, 1, 0), matrix.Color333(0, 0, 1), matrix.Color333(1, 0, 1), matrix.Color333(1, 1, 0), matrix.Color333(0, 1, 1), matrix.Color333(1, 2, 0)};  // index matches with pieces index
 const uint16_t tetrisTitle[] PROGMEM = {
-       012345,067000, 00000, 00000, 00000, 00000,
+       000000,000000, 00000, 00000, 00000, 00000,
         01111,011110, 00022,022220, 00022,020000,
         01111,011113,033322,022224,044402, 05550,
         00001,010003,033300,022004, 00402, 05000,
@@ -80,10 +80,14 @@ void menuLoop() {
     {
         drawTitle(tetrisTitle, 1, 3);
         drawTitle(tictactoeTitle, 1, 17);
+        matrix.drawLine(14, 30, 17, 30, matrix.Color333(1, 1, 1));
+        matrix.drawLine(15, 31, 16, 31, matrix.Color333(1, 1, 1));
     }else
     {
         drawTitle(spaceInvadersTitle, 1, 3);
         drawTitle(pacManTitle, 1, 17);
+        matrix.drawLine(14, 1, 17, 1, matrix.Color333(1, 1, 1));
+        matrix.drawLine(15, 0, 16, 0, matrix.Color333(1, 1, 1));
     }
     matrix.drawRect(0, 2 + selection%2*14, 32 ,13,  matrix.Color333(1, 1, 0) );
 
